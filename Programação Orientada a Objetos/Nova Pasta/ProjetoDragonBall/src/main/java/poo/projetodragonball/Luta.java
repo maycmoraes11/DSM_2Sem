@@ -15,10 +15,10 @@ public class Luta {
     private String arena = "Arena de Artes Marciais";
     private boolean aprovada;
     
-    public void marcarLuta(Lutador l0, Lutador l2) {
-        if (l0.getCategoria().equals(l2.getCategoria())&&(l0 != l2)) {
+    public void marcarLuta(Lutador l1, Lutador l2) {
+        if (l1.getCategoria().equals(l2.getCategoria())&&(l1 != l2)) {
             this.aprovada = true;
-            this.desafiado = l0;
+            this.desafiado = l1;
             this.desafiante = l2;
         } else {
             this.aprovada = false;
@@ -33,7 +33,7 @@ public class Luta {
             System.out.println("DESAFIADO"); this.desafiado.getNome();
             System.out.println("DESAFIANTE"); this.desafiante.getNome();
             System.out.println("LOCAL:" + this.arena);
-        }
+        
         
         int vencedor = (int) (Math.random()*3);
         switch(vencedor) {
@@ -43,7 +43,9 @@ public class Luta {
                     this.desafiado.ganharLuta(); this.desafiante.perderLuta(); break;
             case 2: System.out.println(this.desafiante.getNome() + "venceu!");
                     this.desafiante.ganharLuta(); this.desafiado.perderLuta(); break;
-            default: System.out.println ("Luta não pode acontecer"); break;
+            default: System.out.println("Resultado inválido no sorteio."); break;
         }
+        }
+        } 
     }
-}
+
