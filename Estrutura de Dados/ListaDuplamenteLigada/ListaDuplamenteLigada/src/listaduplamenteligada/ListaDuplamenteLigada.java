@@ -24,13 +24,48 @@ public class ListaDuplamenteLigada {
                 this.ultimoNo.proximo = NovoNo; // adiciona um novo nó após o ultimo nó
                 NovoNo.anterior = this.ultimoNo; // salva o nó anterior ao que foi criado para não se perder como ultimo nó
                 this.ultimoNo = NovoNo; // atualiza o ultimo nó como sendo o atual adicionado.
+            }
             this.qtdNo++;    
-            } 
+             
     }      
 
         
     
     public void adicionar(Object info, int indice){
+        if (indice < 0 || indice > qtdNo) {
+            throw new IndexOutOfBoundsException("Índice inválido: " + indice);
+        }
+        if (indice == qtdNo) {
+            adicionar(info);
+            return;
+        }
+        
+        // Se for para adicionar no final, reaproveita o método adicionar básico
+        if (indice == qtdNo) {
+            adicionar(info);
+            return;
+        }
+
+        NoDuplo novoNo = new NoDuplo(info);
+
+        // Se for para adicionar no início
+        if (indice == 0) {
+            novoNo.proximo = primeiroNo;
+            primeiroNo.anterior = novoNo;
+            primeiroNo = novoNo;
+        } else {
+            // Adicionar no meio da lista
+            NoDuplo noAtual = getNo(indice);
+            NoDuplo noAnterior = noAtual.anterior;
+
+            novoNo.proximo = noAtual;
+            novoNo.anterior = noAnterior;
+            noAnterior.proximo = novoNo;
+            noAtual.anterior = novoNo;
+        }
+
+        this.qtdNo++;
+    }
         //adiciona um novo nó na posição definida por índice
         NoDuplo NoIndice = new NoDuplo(info);
         NoIndice NoAtual = new NoIndice();
@@ -67,5 +102,6 @@ public class ListaDuplamenteLigada {
         return NoAtual;
         
     }
+
     
 }
