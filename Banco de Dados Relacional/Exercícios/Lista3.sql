@@ -74,4 +74,17 @@ select * from funcionario where Cod_setor = 2
 order by primeiro_nome asc
 
 --9
+select * from funcionario f inner join setor s 
+on f.Cod_setor =  s.Cod_setor where s.Cod_setor in ('2', '5')
+
+--10
+select primeiro_nome, salario from Funcionario 
+where salario > 2300 and Cod_setor = 3
+
+--11 A
+select distinct Cod_setor from Funcionario
+
+--11 B
+select concat (ultimo_nome, ', ', Cod_setor) as [Empregado e Setor]
+from Funcionario;
 

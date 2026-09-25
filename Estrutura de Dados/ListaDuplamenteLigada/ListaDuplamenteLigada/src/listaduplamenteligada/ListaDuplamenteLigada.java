@@ -21,9 +21,9 @@ public class ListaDuplamenteLigada {
                 this.primeiroNo = NovoNo;
                 this.ultimoNo = NovoNo; 
             } else {
-                this.ultimoNo.proximo = NovoNo;
-                NovoNo.anterior = this.ultimoNo;
-                this.ultimoNo = NovoNo;
+                this.ultimoNo.proximo = NovoNo; // adiciona um novo nó após o ultimo nó
+                NovoNo.anterior = this.ultimoNo; // salva o nó anterior ao que foi criado para não se perder como ultimo nó
+                this.ultimoNo = NovoNo; // atualiza o ultimo nó como sendo o atual adicionado.
             this.qtdNo++;    
             } 
     }      
@@ -32,6 +32,13 @@ public class ListaDuplamenteLigada {
     
     public void adicionar(Object info, int indice){
         //adiciona um novo nó na posição definida por índice
+        NoDuplo NoIndice = new NoDuplo(info);
+        NoIndice NoAtual = new NoIndice();
+        NoIndice.proximo = NoAtual();
+        NoAtual.anterior = NoIndice();
+        NoIndice = NoIndice.proximo;
+        
+                
     }
     public void remover (int indice){
         //remove o nó correspondente ao índice
