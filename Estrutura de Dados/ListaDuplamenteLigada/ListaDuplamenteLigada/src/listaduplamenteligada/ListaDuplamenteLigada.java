@@ -35,10 +35,6 @@ public class ListaDuplamenteLigada {
         if (indice < 0 || indice > qtdNo) {
             throw new IndexOutOfBoundsException("Índice inválido: " + indice);
         }
-        if (indice == qtdNo) {
-            adicionar(info);
-            return;
-        }
         
         // Se for para adicionar no final, reaproveita o método adicionar básico
         if (indice == qtdNo) {
@@ -66,28 +62,58 @@ public class ListaDuplamenteLigada {
 
         this.qtdNo++;
     }
-        //adiciona um novo nó na posição definida por índice
-        NoDuplo NoIndice = new NoDuplo(info);
-        NoIndice NoAtual = new NoIndice();
-        NoIndice.proximo = NoAtual();
-        NoAtual.anterior = NoIndice();
-        NoIndice = NoIndice.proximo;
-        
                 
-    }
-    public void remover (int indice){
+    
+
         //remove o nó correspondente ao índice
+    public void remover(int indice) {
+        if (indice < 0 || indice >= qtdNo) {
+            throw new IndexOutOfBoundsException("Índice inválido: " + indice);
+        }
+
+        NoDuplo noRemover = getNo(indice);
+
+        // Se for o único nó da lista
+        if (qtdNo == 1) {
+            primeiroNo = null;
+            ultimoNo = null;
+        } 
+        // Se for o primeiro nó
+        else if (indice == 0) {
+            primeiroNo = primeiroNo.proximo;
+            primeiroNo.anterior = null;
+        } 
+        // Se for o último nó
+        else if (indice == qtdNo - 1) {
+            ultimoNo = ultimoNo.anterior;
+            ultimoNo.proximo = null;
+        } 
+        // Se estiver no meio da lista
+        else {
+            noRemover.anterior.proximo = noRemover.proximo;
+            noRemover.proximo.anterior = noRemover.anterior;
+        }
+
+        this.qtdNo--;
     }
-    private NoDuplo getNo (int indice){
-        //retorna o nó correspondente ao índice
-        return new NoDuplo ("a");
+    
+    private NoDuplo getNo(int indice) {
+        return percorrerLista(indice);
     }
-    public Object getInfo(int indice){
-        //retorna a informação do nó correspondente ao índice
-        return null;
+
+    // Retorna a informação guardada no nó da posição
+    public Object getInfo(int indice) {
+        NoDuplo no = getNo(indice);
+        return (no != null) ? no.info : null;
     }
-    public void setInfo(int indice, Object info){
-        //altera o valor de info do nó correspondente
+
+    // Altera o valor armazenado no nó da posição
+    public void setInfo(int indice, Object info) {
+        NoDuplo no = getNo(indice);
+        if (no != null) {
+            no.info = info;
+        }
+    
     }
     private NoDuplo percorrerLista (int indice){
         //percorrer a lista do inicio para o fim, até atingir a posição definida por indice
@@ -95,13 +121,15 @@ public class ListaDuplamenteLigada {
         if (indice < 0 || indice >= qtdNo) {
           return null;
         }
-        NoDuplo NoAtual = this.primeiroNo;
+        NoDuplo noAtual = this.primeiroNo;
         for (int i = 0; i < indice; i++) {
-            NoAtual = NoAtual.proximo;
+            noAtual = noAtual.proximo;
         }
-        return NoAtual;
-        
+        return noAtual;
     }
+}
+    
+    
 
     
-}
+
