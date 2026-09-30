@@ -109,4 +109,4 @@ public int buscaBinaria(int valor) {
         else fim = meio - 1;
     }
     return -1;
-}
+}}

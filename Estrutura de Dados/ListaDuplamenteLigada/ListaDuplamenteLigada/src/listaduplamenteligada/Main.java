@@ -14,8 +14,8 @@ public class Main {
 }
     int[] vetor = new int[1000];
     
-    for (int =i;i<vetor.lenght;i++) {
+    for (int =i, i<vetor.lenght;i++) {
     //Gera 1000 valores randomicos
     vetor[i] = 
-}
-}
+
+}}
