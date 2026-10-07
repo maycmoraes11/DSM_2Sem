@@ -22,43 +22,40 @@ function Login() {
 
 const Authenticated = false;
 
-let Pages = Authenticated ? <Dashboard /> : <Login />;
-/*
-if (Authenticated) {
-  Pages = <Dashboard />;
-} else {
-  Pages = <Login />;
-}
-*/
+const Pages = Authenticated ? <Dashboard /> : <Login />;
 
 type Aluno = {
   id: number;
   nome: string;
-  img: string;
+  img?: string; //
 };
 
 const listaAluno: Aluno[] = [
   {
     id: 1,
-    nome: 'Igor Rocha',
+    nome: 'Maycon Moraes',
     img: 'https://randomuser.me/api/portraits/men/3.jpg',
   },
   {
     id: 2,
-    nome: 'Maycon Moraes',
-    img: 'https://randomuser.me/api/portraits/men/2.jpg',
+    nome: 'Ana Silva',
+    img: 'https://randomuser.me/api/portraits/women/2.jpg',
   },
   {
     id: 3,
-    nome: 'Catatarra',
+    nome: 'Carlos Eduardo',
     img: 'https://randomuser.me/api/portraits/men/1.jpg',
   },
-  { id: 4, nome: 'Principe do Trap' },
+  { 
+    id: 4, 
+    nome: 'Beatriz Lima',
+    img: 'https://randomuser.me/api/portraits/women/3.jpg'
+  },
 ];
 
 const avatarPadrao = 'https://randomuser.me/api/portraits/lego/1.jpg';
 
-export default function App() {
+export default function Atv() {
   const [contador, setContador] = useState(0);
   const [segundos, setSegundos] = useState(10);
 
@@ -72,22 +69,25 @@ export default function App() {
         return current - 1;
       });
     }, 1000);
+
     return () => {
       clearInterval(interval);
     };
-  });
+  }, []); // Array de dependências adicionado aqui
 
   function adicionar() {
     setContador(contador + 1);
   }
+
   function diminuir() {
     setContador(contador - 1);
   }
+
   return (
     <>
       <div>
         <h2> Cronômetro </h2>
-        {segundos}
+        {segundos}s
       </div>
       <div>
         <h1> Contador: {contador} </h1>
@@ -98,10 +98,10 @@ export default function App() {
       <Component />
       {Pages}
       <ul>
-        {listaAluno.map((Aluno) => (
-          <li key={Aluno.id}>
-            <img src={Aluno.img || avatarPadrao} alt={Aluno.nome} />
-            <p> {Aluno.nome} </p>
+        {listaAluno.map((aluno) => (
+          <li key={aluno.id}>
+            <img src={aluno.img || avatarPadrao} alt={aluno.nome} width={50} height={50} />
+            <p> {aluno.nome} </p>
           </li>
         ))}
       </ul>
