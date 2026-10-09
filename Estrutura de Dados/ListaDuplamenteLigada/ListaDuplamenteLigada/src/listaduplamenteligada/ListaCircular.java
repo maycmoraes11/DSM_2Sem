@@ -28,7 +28,7 @@ public class ListaCircular {
         qtdNo++;
     }
 
-    // Adicionar por índice (início, meio ou fim)
+    // Adicionar por índice
     public void adicionar(Object item, int indice) {
         if (indice < 0 || indice > qtdNo) return;
 

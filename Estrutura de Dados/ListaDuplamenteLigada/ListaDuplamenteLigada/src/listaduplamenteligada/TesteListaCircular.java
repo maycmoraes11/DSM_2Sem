@@ -16,10 +16,10 @@ public class TesteListaCircular {
         // 1) Testando Adicionar
         lista.adicionar("A");
         lista.adicionar("C");
-        lista.adicionar("B", 1); // Insere no meio (índice 1)
+        lista.adicionar("B", 1);
 
         // 2) Testando Remover
-        lista.remover(0); // Remove o primeiro elemento
+        lista.remover(0);
 
         // 3) Testando a Impressão Recursiva
         String resultado = lista.imprimirLista("Elementos: ", lista.primeiroNo, 0);

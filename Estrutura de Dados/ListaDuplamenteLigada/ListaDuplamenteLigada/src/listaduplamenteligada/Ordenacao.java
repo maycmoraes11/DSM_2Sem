@@ -6,7 +6,7 @@ package listaduplamenteligada;
 
 public class Ordenacao {
 
-    // 3) ORDENAÇÃO POR TROCA (BUBBLE SORT) - CRESCENTE
+    // ORDENAÇÃO POR TROCA (BUBBLE SORT) - CRESCENTE
     public static int[] ordenacaoTrocaCrescente(int[] vetor) {
         int[] v = vetor.clone(); // Cria cópia para não estragar o vetor original
         for (int i = 0; i < v.length - 1; i++) {
@@ -36,7 +36,7 @@ public class Ordenacao {
         return v;
     }
 
-    // 1) BUSCA LINEAR
+    // BUSCA LINEAR
     public static int buscaLinear(int[] vetor, int valor) {
         for (int i = 0; i < vetor.length; i++) {
             if (vetor[i] == valor) return i;
@@ -44,7 +44,7 @@ public class Ordenacao {
         return -1;
     }
 
-    // 2) BUSCA BINÁRIA (requer vetor ordenado)
+    // BUSCA BINÁRIA
     public static int buscaBinaria(int[] vetor, int valor) {
         int inicio = 0, fim = vetor.length - 1;
         while (inicio <= fim) {
@@ -56,7 +56,7 @@ public class Ordenacao {
         return -1;
     }
 
-    // 4) ORDENAÇÃO POR INSERÇÃO (INSERTION SORT)
+    // ORDENAÇÃO POR INSERÇÃO (INSERTION SORT)
     public static int[] ordenacaoInsercao(int[] vetor) {
         int[] v = vetor.clone();
         for (int i = 1; i < v.length; i++) {
@@ -71,7 +71,7 @@ public class Ordenacao {
         return v;
     }
 
-    // 5) ORDENAÇÃO POR SELEÇÃO (SELECTION SORT)
+    // ORDENAÇÃO POR SELEÇÃO (SELECTION SORT)
     public static int[] ordenacaoSelecao(int[] vetor) {
         int[] v = vetor.clone();
         for (int i = 0; i < v.length - 1; i++) {
