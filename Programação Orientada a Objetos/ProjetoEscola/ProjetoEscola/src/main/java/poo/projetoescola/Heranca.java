@@ -12,16 +12,19 @@ public class Heranca {
 
     public static void main(String[] args) {
         
-        Professor prof = new Professor();
-            prof.setNome("Rodrigo");
-            prof.setIdade(27);
-            prof.setSexo("Masc");
-            
-            Pessoa pe = new Pessoa();
-            
-            System.out.println(prof.toString());
-            
-            
+        //Pessoa pes = new Pessoa('Rodrigo', 28, 'Masculino') Não cria pois é abstrato.
         
+        Professor prof1 = new Professor("Rodrigo", 28 ,"Masculino","Java e Python", 9000);
+        Professor prof2 = new Professor("Carlos", 19 ,"Masculino","Python", 5000);
+        
+        Aluno aluno1 = new Aluno ("Gustavo", 18, "Masculino", 12345, "DSM", 1500);
+        Aluno aluno2 = new Aluno ("Igor", 19, "Masculino", 54321, "DSM", 1500);
+        
+        Bolsista bolsista1 = new Bolsista ("Igor", 19, "Masculino", 54321, "DSM", 1500, 50);
+        Bolsista bolsista2 = new Bolsista ("Gustavo", 19, "Masculino", 54321, "DSM", 1500, 100);
+            
+            prof1.toString();
+            prof2.toString();
+            
     }
 }

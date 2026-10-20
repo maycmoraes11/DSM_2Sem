@@ -12,6 +12,14 @@ public class Professor extends Pessoa {
     private String especialidade;
     private float salario;
     
+    public Professor (String nome, int idade, String sexo, String esp, float sal) {
+        this.nome = nome;
+        this.idade= idade;
+        this.sexo= sexo;
+        this.especialidade=esp;
+        this.salario=sal;
+    }
+    
     public void receberAumento(float aum) {
         this.salario+= aum;
     }
@@ -31,5 +39,11 @@ public class Professor extends Pessoa {
     public void setSalario(float salario) {
         this.salario = salario;
     }
+
+    @Override
+    public String toString() {
+        return "Professor{" + "especialidade=" + especialidade + ", salario=" + salario + '}';
+    }
+    private static final System.Logger LOG = System.getLogger(Professor.class.getName());
     
 }
