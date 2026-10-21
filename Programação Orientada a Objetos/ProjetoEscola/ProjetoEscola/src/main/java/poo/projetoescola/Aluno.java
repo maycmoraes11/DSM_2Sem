@@ -9,8 +9,18 @@ package poo.projetoescola;
  * @author Alunos
  */
 public class Aluno extends Pessoa {
-    private int matricula;
-    private String curso;
+    protected int matricula;
+    protected String curso;
+    protected int mensalidade;
+    
+    public Aluno (String nome, int idade, String sexo, int matricula, String curso, int mensalidade) {
+        this.nome = nome;
+        this.idade= idade;
+        this.sexo= sexo;
+        this.matricula= matricula;
+        this.curso= curso;
+        this.mensalidade= mensalidade;
+    }
     
     public void cancelarMatricula() {
         System.out.println("Matrícula de " +this.getNome() + "está cancelada!");
@@ -33,6 +43,11 @@ public class Aluno extends Pessoa {
     }
     public void pagarMensalidade() {
         System.out.println("Matricula Paga!");
+    }
+
+    @Override
+    public String toString() {
+        return "Aluno{" + "matricula=" + matricula + ", curso=" + curso + ", mensalidade=" + mensalidade + '}';
     }
     
 }

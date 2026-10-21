@@ -9,9 +9,9 @@ package poo.projetoescola;
  * @author Alunos
  */
 public abstract class Pessoa {
-    private String nome;
-    private int idade;
-    private String sexo;
+    protected String nome;
+    protected int idade;
+    protected String sexo;
     
     public void fazerAniv(){
         this.idade++;
