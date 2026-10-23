@@ -13,7 +13,7 @@ public class TesteRecursao {
     public static void main(String[] args) {
 
         System.out.println("=== TESTES: 1. Soma dos Algarismos ===");
-        // Teste 1: Paragem imediata (número menor que 10)
+        // Teste 1: Paragem (menor que 10)
         System.out.println("Entrada 0 -> Resultado: " + Recursao.somarAlgarismos(0)); 
         // Teste 2
         System.out.println("Entrada 507 -> Resultado: " + Recursao.somarAlgarismos(507)); 

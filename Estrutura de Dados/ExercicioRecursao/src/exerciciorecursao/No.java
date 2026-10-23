@@ -13,7 +13,6 @@ public class No {
     int valor;
     No proximo;
 
-    // Construtor para criar a caixinha
     public No(int valor, No proximo) {
         this.valor = valor;
         this.proximo = proximo;
