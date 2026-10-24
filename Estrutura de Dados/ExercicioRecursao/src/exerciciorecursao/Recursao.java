@@ -8,16 +8,13 @@ package exerciciorecursao;
  *
  * @author mayco
  */
-// Arquivo: Recursao.java
+
 public class Recursao {
 
-    // ==========================================
     // EXERCÍCIO 1: Soma dos Algarismos
-    // ==========================================
     public static int somarAlgarismos(int n) {
         // CONDIÇÃO DE PARAGEM:
         // Se o número for menor que 10, ele tem apenas 1 dígito.
-        // Paramos a recursão e retornamos o próprio número.
         if (n < 10) {
             return n;
         }
@@ -30,13 +27,10 @@ public class Recursao {
         return (n % 10) + somarAlgarismos(n / 10);
     }
 
-    // ==========================================
     // EXERCÍCIO 2: Cálculo de Potência
-    // ==========================================
     public static int calcularPotencia(int base, int expoente) {
         // CONDIÇÃO DE PARAGEM:
         // Qualquer número elevado a 0 dá 1. 
-        // Se o expoente for 0, paramos imediatamente e retornamos 1.
         if (expoente == 0) {
             return 1;
         }
@@ -47,12 +41,10 @@ public class Recursao {
         return base * calcularPotencia(base, expoente - 1);
     }
 
-    // ==========================================
     // EXERCÍCIO 3: Conversão de Decimal para Binário
-    // ==========================================
     public static String converterParaBinario(int n) {
         // CONDIÇÃO DE PARAGEM:
-        // Se o número for 0 ou 1, já é o próprio dígito binário. Paramos aqui.
+        // Se o número for 0 ou 1, já é o binário. Para aqui.
         if (n <= 1) {
             return String.valueOf(n);
         }
@@ -63,13 +55,11 @@ public class Recursao {
         return converterParaBinario(n / 2) + (n % 2);
     }
 
-    // ==========================================
     // EXERCÍCIO 4: Soma dos Elementos da Lista Ligada
-    // ==========================================
     public static int somarLista(No no) {
         // CONDIÇÃO DE PARAGEM:
-        // Se o nó for nulo (chegamos ao fim da lista ou a lista está vazia),
-        // paramos e retornamos 0 (elemento neutro da soma).
+        // Se o nó for nulo (chegamos ao fim da lista / vazia),
+        // paramos e retorna 0.
         if (no == null) {
             return 0;
         }
