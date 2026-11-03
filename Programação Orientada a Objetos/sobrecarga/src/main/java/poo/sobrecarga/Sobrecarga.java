@@ -11,8 +11,12 @@ package poo.sobrecarga;
 public class Sobrecarga {
 
     public static void main(String[] args) {
+        Lobo lob = new Lobo();
+        lob.Login("lobin@lobe.com", "senhamagica");
+        
         Cachorro c = new Cachorro();
         c.reagir(1,1f);
-        c.login();
+        
+        
     }
 }
