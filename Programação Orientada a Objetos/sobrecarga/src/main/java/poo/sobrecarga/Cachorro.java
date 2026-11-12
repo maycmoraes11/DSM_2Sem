@@ -9,6 +9,10 @@ package poo.sobrecarga;
  * @author Alunos
  */
 public class Cachorro extends Lobo {
+
+    public Cachorro() {
+    // Construtor vazio
+}
     public void reagir(String frase) {
         System.out.println("Sai fora!");
     }
@@ -21,13 +25,15 @@ public class Cachorro extends Lobo {
     public void reagir (int idade, float peso) {
         System.out.println("Pesadaum");
     }
-    public void Login (String email, String senha) {
-        System.out.println("Passou com a senha e o email");
-    }
+
     public void Login (String telefone, int pin) {
         System.out.println("telefone e pin");
     }
     public void Login (String tokenBiometrico) {
         System.out.println("telefone e pin");
     }
+    public void Login (int pin, String senha) {
+        System.out.println("Passou com a senha e o email");
+    }
+
 }
