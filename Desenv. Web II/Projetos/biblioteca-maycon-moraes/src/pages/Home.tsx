@@ -140,7 +140,7 @@ export default function Index() {
               titulo="Dom Casmurro"
               autor="Machado de Assis"
               categoria="Romance"
-             imagem="/img/dc.jpg"
+             imagem="/img/domcasmurro.webp"
             />
             <CardLivros
               titulo="O Cortiço"
