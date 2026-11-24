@@ -140,19 +140,19 @@ export default function Index() {
               titulo="Dom Casmurro"
               autor="Machado de Assis"
               categoria="Romance"
-             imagem="C:\Users\Alunos\Downloads\dc.jfif"
+             imagem="C:\Users\Alunos\Desktop\DSM_2Sem\Desenv. Web II\Projetos\biblioteca-maycon-moraes\img\dc.jfif"
             />
             <CardLivros
               titulo="O Cortiço"
               autor="Aluísio Azevedo"
               categoria="Romance"
-              imagem="C:\Users\Alunos\Downloads\CAPA_3000px_O-CORTICO_.webp"
+              imagem="C:\Users\Alunos\Desktop\DSM_2Sem\Desenv. Web II\Projetos\biblioteca-maycon-moraes\img\CAPA_3000px_O-CORTICO_.webp"
             />
             <CardLivros
               titulo="O Pequeno Príncipe"
               autor="Antoine de Saint-Exupéry"
               categoria="Literatura"
-              imagem="C:\Users\Alunos\Downloads\OIP.webp"
+              imagem="C:\Users\Alunos\Desktop\DSM_2Sem\Desenv. Web II\Projetos\biblioteca-maycon-moraes\img\OIP.webp"
             />
           </div>
         </section>
