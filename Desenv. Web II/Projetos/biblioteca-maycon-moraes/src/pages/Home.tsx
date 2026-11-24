@@ -28,7 +28,7 @@ export default function Index() {
               href="/register" 
               className="bg-[#119955] text-white border border-[#119955] py-2.5 px-5 rounded-lg text-sm font-semibold no-underline hover:bg-[#119955] transition-colors"
             >
-              Criar conta
+              Chat
             </a>
           </div>
         </div>
@@ -140,17 +140,19 @@ export default function Index() {
               titulo="Dom Casmurro"
               autor="Machado de Assis"
               categoria="Romance"
-             // imagem="https://images.unsplash.com/photo-1544947950-fa07a98d237f?q=80&w=400&auto=format&fit=crop"
+             imagem="C:\Users\Alunos\Downloads\dc.jfif"
             />
             <CardLivros
               titulo="O Cortiço"
               autor="Aluísio Azevedo"
               categoria="Romance"
+              imagem="C:\Users\Alunos\Downloads\CAPA_3000px_O-CORTICO_.webp"
             />
             <CardLivros
               titulo="O Pequeno Príncipe"
               autor="Antoine de Saint-Exupéry"
               categoria="Literatura"
+              imagem="C:\Users\Alunos\Downloads\OIP.webp"
             />
           </div>
         </section>

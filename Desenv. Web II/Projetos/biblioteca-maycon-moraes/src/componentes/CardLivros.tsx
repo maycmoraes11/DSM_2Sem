@@ -2,7 +2,7 @@ interface CardLivrosProps {
   titulo: string
   autor: string
   categoria: string
-  //imagem?: string
+  imagem?: string
 }
 
 
@@ -10,17 +10,17 @@ function CardLivros({
   titulo,
   autor,
   categoria,
-  //imagem,
+  imagem,
 }: CardLivrosProps) {
   return (
     <article className="flex gap-6 border-b border-gray-300 py-6">
       <div className="h-32 w-24 shrink-0 border-2 border-black">
-        {/* Futuramente colocaremos a capa */}
-        {/* <img 
+      
+        <img 
           src={imagem} 
           alt={`Capa do livro ${titulo}`} 
           className="h-full w-full object-cover"
-        /> */}
+        />
       </div>
 
       <div>
